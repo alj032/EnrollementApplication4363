@@ -22,43 +22,49 @@ Partial Class ViewTeachersStudentsForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GoBackButton = New System.Windows.Forms.Button()
+        Me.TeachersStudentsDataGridView = New System.Windows.Forms.DataGridView()
+        CType(Me.TeachersStudentsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'GoBackButton
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(675, 359)
-        Me.DataGridView1.TabIndex = 0
+        Me.GoBackButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GoBackButton.Location = New System.Drawing.Point(12, 377)
+        Me.GoBackButton.Name = "GoBackButton"
+        Me.GoBackButton.Size = New System.Drawing.Size(677, 105)
+        Me.GoBackButton.TabIndex = 2
+        Me.GoBackButton.Text = "Go Back"
+        Me.GoBackButton.UseVisualStyleBackColor = True
         '
-        'Button1
+        'TeachersStudentsDataGridView
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(12, 377)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(677, 105)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Go Back"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.TeachersStudentsDataGridView.AllowUserToOrderColumns = True
+        Me.TeachersStudentsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.TeachersStudentsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.TeachersStudentsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TeachersStudentsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        Me.TeachersStudentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TeachersStudentsDataGridView.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.TeachersStudentsDataGridView.Location = New System.Drawing.Point(10, 12)
+        Me.TeachersStudentsDataGridView.Name = "TeachersStudentsDataGridView"
+        Me.TeachersStudentsDataGridView.ReadOnly = True
+        Me.TeachersStudentsDataGridView.Size = New System.Drawing.Size(677, 334)
+        Me.TeachersStudentsDataGridView.TabIndex = 3
         '
         'ViewTeachersStudentsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(699, 498)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.TeachersStudentsDataGridView)
+        Me.Controls.Add(Me.GoBackButton)
         Me.Name = "ViewTeachersStudentsForm"
         Me.Text = "Current Students"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TeachersStudentsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents GoBackButton As Button
+    Friend WithEvents TeachersStudentsDataGridView As DataGridView
 End Class

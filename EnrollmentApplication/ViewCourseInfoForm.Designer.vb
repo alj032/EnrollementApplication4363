@@ -22,43 +22,49 @@ Partial Class ViewCourseInfoForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CourseRosterDataGridView = New System.Windows.Forms.DataGridView()
+        CType(Me.CourseRosterDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(677, 359)
-        Me.DataGridView1.TabIndex = 1
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(12, 377)
+        Me.Button1.Location = New System.Drawing.Point(12, 352)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(677, 105)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Go Back"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'CourseRosterDataGridView
+        '
+        Me.CourseRosterDataGridView.AllowUserToOrderColumns = True
+        Me.CourseRosterDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.CourseRosterDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.CourseRosterDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.CourseRosterDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        Me.CourseRosterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CourseRosterDataGridView.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.CourseRosterDataGridView.Location = New System.Drawing.Point(12, 12)
+        Me.CourseRosterDataGridView.Name = "CourseRosterDataGridView"
+        Me.CourseRosterDataGridView.ReadOnly = True
+        Me.CourseRosterDataGridView.Size = New System.Drawing.Size(677, 334)
+        Me.CourseRosterDataGridView.TabIndex = 4
+        '
         'ViewCourseInfoForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(702, 503)
+        Me.ClientSize = New System.Drawing.Size(702, 469)
+        Me.Controls.Add(Me.CourseRosterDataGridView)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Name = "ViewCourseInfoForm"
         Me.Text = "Course Information"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CourseRosterDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1 As Button
+    Friend WithEvents CourseRosterDataGridView As DataGridView
 End Class

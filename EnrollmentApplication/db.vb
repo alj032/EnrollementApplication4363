@@ -21,6 +21,33 @@ Public Class db
     Public Sub bind(ByVal parameter As String, ByRef value As Object)
         command.Parameters.AddWithValue(parameter, value)
     End Sub
+    ' populate a data table
+    Public Sub Tablefill(ByRef dgv As DataTable)
+        Dim adapter As SqlDataAdapter
+        Dim dataset As DataSet
+
+        Try
+            connection.Open()
+            adapter = New SqlDataAdapter(command)
+            dataset = New DataSet
+            adapter.Fill(dataset)
+            If dataset.Tables.Count > 0 Then
+
+                dgv.Reset()
+                dgv.Clear()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Throw ex
+        Finally
+            If connection.State = ConnectionState.Open Then
+                connection.Close()
+            End If
+        End Try
+        command.CommandText = Nothing
+        command.Parameters.Clear()
+    End Sub
+
 
     ' populate a data grid view
     Public Sub fill(ByRef dgv As DataGridView)

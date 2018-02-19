@@ -33,12 +33,12 @@ Partial Class MainForm
         Me.CoursesDataGridView = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.StudentSearchTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.InstructorSearchTextBox = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.CourseSearchBox = New System.Windows.Forms.TextBox()
         Me.StudentClassesButton = New System.Windows.Forms.Button()
         Me.TeachersStudentButton = New System.Windows.Forms.Button()
         Me.CourseInfoButton = New System.Windows.Forms.Button()
@@ -81,17 +81,19 @@ Partial Class MainForm
         Me.AddStudentButton = New System.Windows.Forms.Button()
         Me.AddCourseButton = New System.Windows.Forms.Button()
         Me.AddInstructorButton = New System.Windows.Forms.Button()
+        Me.UserInfoDataGridView = New System.Windows.Forms.DataGridView()
         CType(Me.StudentsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip2.SuspendLayout()
         CType(Me.InstructorsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CoursesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UserInfoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StudentsDataGridView
         '
         Me.StudentsDataGridView.AllowUserToOrderColumns = True
-        Me.StudentsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader
-        Me.StudentsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
+        Me.StudentsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.StudentsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.StudentsDataGridView.BackgroundColor = System.Drawing.SystemColors.Info
         Me.StudentsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.StudentsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
@@ -154,8 +156,8 @@ Partial Class MainForm
         'InstructorsDataGridView
         '
         Me.InstructorsDataGridView.AllowUserToOrderColumns = True
-        Me.InstructorsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader
-        Me.InstructorsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
+        Me.InstructorsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.InstructorsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.InstructorsDataGridView.BackgroundColor = System.Drawing.SystemColors.Info
         Me.InstructorsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.InstructorsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
@@ -170,8 +172,8 @@ Partial Class MainForm
         'CoursesDataGridView
         '
         Me.CoursesDataGridView.AllowUserToOrderColumns = True
-        Me.CoursesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader
-        Me.CoursesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
+        Me.CoursesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.CoursesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.CoursesDataGridView.BackgroundColor = System.Drawing.SystemColors.Info
         Me.CoursesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.CoursesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
@@ -203,12 +205,12 @@ Partial Class MainForm
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Courses"
         '
-        'TextBox1
+        'StudentSearchTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(245, 50)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 9
+        Me.StudentSearchTextBox.Location = New System.Drawing.Point(245, 50)
+        Me.StudentSearchTextBox.Name = "StudentSearchTextBox"
+        Me.StudentSearchTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.StudentSearchTextBox.TabIndex = 9
         '
         'Label3
         '
@@ -230,12 +232,12 @@ Partial Class MainForm
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "Search:"
         '
-        'TextBox2
+        'InstructorSearchTextBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(655, 48)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 11
+        Me.InstructorSearchTextBox.Location = New System.Drawing.Point(655, 48)
+        Me.InstructorSearchTextBox.Name = "InstructorSearchTextBox"
+        Me.InstructorSearchTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.InstructorSearchTextBox.TabIndex = 11
         '
         'Label5
         '
@@ -247,12 +249,12 @@ Partial Class MainForm
         Me.Label5.TabIndex = 14
         Me.Label5.Text = "Search:"
         '
-        'TextBox3
+        'CourseSearchBox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(1053, 48)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 13
+        Me.CourseSearchBox.Location = New System.Drawing.Point(1053, 48)
+        Me.CourseSearchBox.Name = "CourseSearchBox"
+        Me.CourseSearchBox.Size = New System.Drawing.Size(100, 20)
+        Me.CourseSearchBox.TabIndex = 13
         '
         'StudentClassesButton
         '
@@ -631,11 +633,20 @@ Partial Class MainForm
         Me.AddInstructorButton.TabIndex = 15
         Me.AddInstructorButton.UseVisualStyleBackColor = False
         '
+        'UserInfoDataGridView
+        '
+        Me.UserInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.UserInfoDataGridView.Location = New System.Drawing.Point(571, 289)
+        Me.UserInfoDataGridView.Name = "UserInfoDataGridView"
+        Me.UserInfoDataGridView.Size = New System.Drawing.Size(240, 150)
+        Me.UserInfoDataGridView.TabIndex = 64
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1165, 570)
+        Me.Controls.Add(Me.UserInfoDataGridView)
         Me.Controls.Add(Me.CancelCourseButton)
         Me.Controls.Add(Me.ConfirmCourseButton)
         Me.Controls.Add(Me.EditCourseButton)
@@ -679,11 +690,11 @@ Partial Class MainForm
         Me.Controls.Add(Me.AddCourseButton)
         Me.Controls.Add(Me.AddInstructorButton)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.CourseSearchBox)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.InstructorSearchTextBox)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.StudentSearchTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CoursesDataGridView)
@@ -699,6 +710,7 @@ Partial Class MainForm
         Me.MenuStrip2.PerformLayout()
         CType(Me.InstructorsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CoursesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UserInfoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -714,12 +726,12 @@ Partial Class MainForm
     Friend WithEvents CoursesDataGridView As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents StudentSearchTextBox As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents InstructorSearchTextBox As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents CourseSearchBox As TextBox
     Friend WithEvents AddInstructorButton As Button
     Friend WithEvents AddCourseButton As Button
     Friend WithEvents AddStudentButton As Button
@@ -762,4 +774,5 @@ Partial Class MainForm
     Friend WithEvents CancelCourseButton As Button
     Friend WithEvents ConfirmCourseButton As Button
     Friend WithEvents EditCourseButton As Button
+    Friend WithEvents UserInfoDataGridView As DataGridView
 End Class

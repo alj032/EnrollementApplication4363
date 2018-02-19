@@ -28,6 +28,8 @@ Partial Class LoginForm
         Me.PasswordTextbox = New System.Windows.Forms.TextBox()
         Me.LoginButton = New System.Windows.Forms.Button()
         Me.Skip = New System.Windows.Forms.Button()
+        Me.LoginResults = New System.Windows.Forms.DataGridView()
+        CType(Me.LoginResults, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -80,11 +82,21 @@ Partial Class LoginForm
         Me.Skip.Text = "Skip"
         Me.Skip.UseVisualStyleBackColor = True
         '
+        'LoginResults
+        '
+        Me.LoginResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.LoginResults.Location = New System.Drawing.Point(12, 213)
+        Me.LoginResults.Name = "LoginResults"
+        Me.LoginResults.Size = New System.Drawing.Size(240, 23)
+        Me.LoginResults.TabIndex = 6
+        Me.LoginResults.Visible = False
+        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 219)
+        Me.ClientSize = New System.Drawing.Size(267, 240)
+        Me.Controls.Add(Me.LoginResults)
         Me.Controls.Add(Me.Skip)
         Me.Controls.Add(Me.LoginButton)
         Me.Controls.Add(Me.PasswordTextbox)
@@ -93,6 +105,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.Label1)
         Me.Name = "LoginForm"
         Me.Text = "Login"
+        CType(Me.LoginResults, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -104,4 +117,5 @@ Partial Class LoginForm
     Friend WithEvents PasswordTextbox As TextBox
     Friend WithEvents LoginButton As Button
     Friend WithEvents Skip As Button
+    Friend WithEvents LoginResults As DataGridView
 End Class
